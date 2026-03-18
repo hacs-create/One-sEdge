@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #fafaf9;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --popover: #ffffff;
+  --popover-foreground: #1c1917;
+  --primary: #1e293b;
+  --primary-foreground: #fafaf9;
+  --secondary: #e7e5e4;
+  --secondary-foreground: #1c1917;
+  --muted: #f5f5f4;
+  --muted-foreground: #78716c;
+  --accent: #d6d3d1;
+  --accent-foreground: #1c1917;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e7e5e4;
+  --input: transparent;
+  --input-background: #fafaf9;
+  --switch-background: #d6d3d1;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #a8a29e;
+  --chart-1: #1e293b;
+  --chart-2: #475569;
+  --chart-3: #64748b;
+  --chart-4: #94a3b8;
+  --chart-5: #cbd5e1;
+  --radius: 0.5rem;
+  --sidebar: #fafaf9;
+  --sidebar-foreground: #1c1917;
+  --sidebar-primary: #1e293b;
+  --sidebar-primary-foreground: #fafaf9;
+  --sidebar-accent: #f5f5f4;
+  --sidebar-accent-foreground: #1c1917;
+  --sidebar-border: #e7e5e4;
+  --sidebar-ring: #a8a29e;
+  --brand-accent: #22c55e;
+  --navy-primary: #1e293b;
+  --charcoal: #292524;
+  --beige-light: #f5f5f4;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* ====================================
+   モバイルタイポグラフィ最適化
+   ==================================== */
+
+/* モバイルでの基本フォントサイズ調整 */
+@media (max-width: 767px) {
+  :root {
+    --font-size: 15px;
+  }
+  
+  /* 長いテキストの改行を促進 */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* 長い単語やURLの改行 */
+  a, p, span, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* ====================================
+   背景パターンシステム
+   ====================================
+   
+   レスポンシブ最適化:
+   - デスクトップ（1025px〜）: フルサイズ、高い視認性
+   - タブレット（768px-1024px）: 中間サイズ、バランス重視
+   - モバイル（〜767px）: 小サイズ、パフォーマンス優先
+   
+   高解像度ディスプレイ対応:
+   - Retina/HiDPIディスプレイで透明度を微増
+   - より鮮明な視認性を実現
+   
+   透明度の段階設定:
+   - デスクトップ: 0.038-0.045（最適な視認性）
+   - タブレット: 0.036-0.042（バランス）
+   - モバイル: 0.032-0.038（控えめ）
+   - 高解像度: 0.042-0.05（鮮明）
+   
+   パフォーマンス最適化:
+   - CSS Gradientsを使用（画像より軽量）
+   - デバイスごとにパターンサイズを最適化
+   - GPU加速のためにtransformを使用
+   - prefers-reduced-motionに対応
+   ==================================== */
+
+/* ====================================
+   ダイヤモンドグリッドパターン
+   ==================================== */
+
+/* 
+ * ブランドロゴの69デザインと統一感のあるダイヤモンドパターン
+ * - デスクトップ: 透明度0.038、サイズ60px（最も鮮明）
+ * - タブレット: 透明度0.036、サイズ50px（バランス重視）
+ * - モバイル: 透明度0.032、サイズ40px（パフォーマンス優先）
+ * - 高解像度: 透明度0.042（Retinaディスプレイで最適な視認性）
+ */
+.bg-diamond-pattern {
+  background-color: #fafaf9;
+  background-image: 
+    linear-gradient(45deg, transparent 45%, rgba(34, 197, 94, 0.038) 45%, rgba(34, 197, 94, 0.038) 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, rgba(34, 197, 94, 0.038) 45%, rgba(34, 197, 94, 0.038) 55%, transparent 55%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* タブレット表示（768px-1024px） */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bg-diamond-pattern {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(34, 197, 94, 0.036) 45%, rgba(34, 197, 94, 0.036) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(34, 197, 94, 0.036) 45%, rgba(34, 197, 94, 0.036) 55%, transparent 55%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+  }
+}
+
+/* モバイル表示（〜767px） */
+@media (max-width: 767px) {
+  .bg-diamond-pattern {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(34, 197, 94, 0.032) 45%, rgba(34, 197, 94, 0.032) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(34, 197, 94, 0.032) 45%, rgba(34, 197, 94, 0.032) 55%, transparent 55%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+}
+
+/* 高解像度ディスプレイ最適化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-diamond-pattern {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(34, 197, 94, 0.042) 45%, rgba(34, 197, 94, 0.042) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(34, 197, 94, 0.042) 45%, rgba(34, 197, 94, 0.042) 55%, transparent 55%);
+  }
+}
+
+/* ダークセクション用ダイヤモンドパターン */
+.bg-diamond-pattern-dark {
+  background-color: #1c1917;
+  background-image: 
+    linear-gradient(45deg, transparent 45%, rgba(250, 250, 249, 0.032) 45%, rgba(250, 250, 249, 0.032) 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, rgba(250, 250, 249, 0.032) 45%, rgba(250, 250, 249, 0.032) 55%, transparent 55%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* タブレット表示（768px-1024px） */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bg-diamond-pattern-dark {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(250, 250, 249, 0.030) 45%, rgba(250, 250, 249, 0.030) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(250, 250, 249, 0.030) 45%, rgba(250, 250, 249, 0.030) 55%, transparent 55%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+  }
+}
+
+/* モバイル表示（〜767px） */
+@media (max-width: 767px) {
+  .bg-diamond-pattern-dark {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(250, 250, 249, 0.026) 45%, rgba(250, 250, 249, 0.026) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(250, 250, 249, 0.026) 45%, rgba(250, 250, 249, 0.026) 55%, transparent 55%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+}
+
+/* 高解像度ディスプレイ最適化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-diamond-pattern-dark {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(250, 250, 249, 0.036) 45%, rgba(250, 250, 249, 0.036) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(250, 250, 249, 0.036) 45%, rgba(250, 250, 249, 0.036) 55%, transparent 55%);
+  }
+}
+
+/* 微細なドットパターン (エレガント) */
+.bg-elegant-dots {
+  background-color: #fafaf9;
+  background-image: radial-gradient(circle at 1px 1px, rgba(34, 197, 94, 0.045) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* タブレット表示 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bg-elegant-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgba(34, 197, 94, 0.042) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+/* モバイル表示 */
+@media (max-width: 767px) {
+  .bg-elegant-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgba(34, 197, 94, 0.038) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+}
+
+/* 高解像度ディスプレイ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-elegant-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgba(34, 197, 94, 0.05) 1px, transparent 0);
+  }
+}
+
+/* 洗練されたグリッドパターン */
+.bg-refined-grid {
+  background-color: #fafaf9;
+  background-image: 
+    linear-gradient(rgba(34, 197, 94, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* タブレット表示 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bg-refined-grid {
+    background-image: 
+      linear-gradient(rgba(34, 197, 94, 0.042) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.042) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+}
+
+/* モバイル表示 */
+@media (max-width: 767px) {
+  .bg-refined-grid {
+    background-image: 
+      linear-gradient(rgba(34, 197, 94, 0.038) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.038) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+/* 高解像度ディスプレイ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-refined-grid {
+    background-image: 
+      linear-gradient(rgba(34, 197, 94, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+  }
+}
+
+/* ノイズテクスチャ付きグラデーション (プレミアム感) */
+.bg-premium-gradient {
+  background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 50%, #fafaf9 100%);
+  position: relative;
+}
+
+.bg-premium-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* 高解像度ディスプレイ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-premium-gradient::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+}
+
+/* 波状パターン (流動的でエレガント) */
+.bg-wave-pattern {
+  background-color: #fafaf9;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(34, 197, 94, 0.028) 35px,
+      rgba(34, 197, 94, 0.028) 70px
+    );
+}
+
+/* タブレット表示 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bg-wave-pattern {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 28px,
+        rgba(34, 197, 94, 0.026) 28px,
+        rgba(34, 197, 94, 0.026) 56px
+      );
+  }
+}
+
+/* モバイル表示 */
+@media (max-width: 767px) {
+  .bg-wave-pattern {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 24px,
+        rgba(34, 197, 94, 0.024) 24px,
+        rgba(34, 197, 94, 0.024) 48px
+      );
+  }
+}
+
+/* 高解像度ディスプレイ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-wave-pattern {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 35px,
+        rgba(34, 197, 94, 0.032) 35px,
+        rgba(34, 197, 94, 0.032) 70px
+      );
+  }
+}
+
+/* ダークセクション用パターン */
+.bg-dark-elegant-dots {
+  background-color: #1c1917;
+  background-image: radial-gradient(circle at 1px 1px, rgba(250, 250, 249, 0.045) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* タブレット表示 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bg-dark-elegant-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgba(250, 250, 249, 0.042) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+/* モバイル表示 */
+@media (max-width: 767px) {
+  .bg-dark-elegant-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgba(250, 250, 249, 0.038) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+}
+
+/* 高解像度ディスプレイ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-dark-elegant-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgba(250, 250, 249, 0.05) 1px, transparent 0);
+  }
+}
+
+.bg-dark-refined-grid {
+  background-color: #1c1917;
+  background-image: 
+    linear-gradient(rgba(250, 250, 249, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 250, 249, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* タブレット表示 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bg-dark-refined-grid {
+    background-image: 
+      linear-gradient(rgba(250, 250, 249, 0.042) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250, 250, 249, 0.042) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+}
+
+/* モバイル表示 */
+@media (max-width: 767px) {
+  .bg-dark-refined-grid {
+    background-image: 
+      linear-gradient(rgba(250, 250, 249, 0.038) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250, 250, 249, 0.038) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+/* 高解像度ディスプレイ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-dark-refined-grid {
+    background-image: 
+      linear-gradient(rgba(250, 250, 249, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250, 250, 249, 0.05) 1px, transparent 1px);
+  }
+}
+
+/* セクション間のエレガントな区切り線 */
+.elegant-divider {
+  position: relative;
+}
+
+.elegant-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  max-width: 800px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(34, 197, 94, 0.2) 20%,
+    rgba(34, 197, 94, 0.2) 80%,
+    transparent
+  );
+}
+
+/* 微妙な光沢効果 */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 70%
+  );
+  animation: shimmer 15s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* アニメーション削減設定への対応 */
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-effect::after {
+    animation: none;
+  }
+}
+
+/* テクスチャオーバーレイ */
+.texture-overlay {
+  position: relative;
+}
+
+.texture-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grain' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Crect x='0' y='0' width='1' height='1' fill='%23000' opacity='0.02'/%3E%3Crect x='20' y='20' width='1' height='1' fill='%23000' opacity='0.02'/%3E%3Crect x='40' y='40' width='1' height='1' fill='%23000' opacity='0.02'/%3E%3Crect x='60' y='60' width='1' height='1' fill='%23000' opacity='0.02'/%3E%3Crect x='80' y='80' width='1' height='1' fill='%23000' opacity='0.02'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23grain)' width='100' height='100'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* グラスモーフィズム効果 (モダンでラグジュアリー) */
+.glass-effect {
+  background: rgba(250, 250, 249, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* ====================================
+   アクセシビリティとコントラスト最適化
+   ==================================== */
+
+/* 
+ * WCAG 2.1 AA基準対応
+ * - 通常テキスト: 4.5:1以上のコントラスト比
+ * - 大きいテキスト: 3:1以上のコントラスト比
+ * - パターン背景は十分に控えめで、テキスト可読性を損なわない
+ */
+
+/* 高コントラストモード対応 */
+@media (prefers-contrast: high) {
+  .bg-diamond-pattern {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(34, 197, 94, 0.055) 45%, rgba(34, 197, 94, 0.055) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(34, 197, 94, 0.055) 45%, rgba(34, 197, 94, 0.055) 55%, transparent 55%);
+  }
+  
+  .bg-diamond-pattern-dark {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(250, 250, 249, 0.048) 45%, rgba(250, 250, 249, 0.048) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(250, 250, 249, 0.048) 45%, rgba(250, 250, 249, 0.048) 55%, transparent 55%);
+  }
+  
+  .bg-elegant-dots,
+  .bg-refined-grid,
+  .bg-dark-elegant-dots,
+  .bg-dark-refined-grid {
+    opacity: 1.15;
+  }
+}
+
+/* 低コントラストモード対応 */
+@media (prefers-contrast: low) {
+  .bg-diamond-pattern {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(34, 197, 94, 0.025) 45%, rgba(34, 197, 94, 0.025) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(34, 197, 94, 0.025) 45%, rgba(34, 197, 94, 0.025) 55%, transparent 55%);
+  }
+  
+  .bg-diamond-pattern-dark {
+    background-image: 
+      linear-gradient(45deg, transparent 45%, rgba(250, 250, 249, 0.020) 45%, rgba(250, 250, 249, 0.020) 55%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(250, 250, 249, 0.020) 45%, rgba(250, 250, 249, 0.020) 55%, transparent 55%);
+  }
+  
+  .bg-elegant-dots,
+  .bg-refined-grid,
+  .bg-dark-elegant-dots,
+  .bg-dark-refined-grid {
+    opacity: 0.85;
+  }
+}
+
+/* テキストコントラスト確保用クラス */
+.text-contrast-safe {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.text-contrast-safe-dark {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+}
